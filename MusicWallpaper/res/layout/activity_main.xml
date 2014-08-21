@@ -9,11 +9,17 @@
 
     <TextView
         android:id="@+id/thankYouLabel"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:text="@string/thankYou"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/thankYou"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        tools:ignore="ContentDescription" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView1"
@@ -21,65 +27,65 @@
         android:layout_height="wrap_content" >
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal" >
 
             <ImageView
                 android:id="@+id/cdImage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="200dp"
-                android:src="@drawable/cd"
-                android:adjustViewBounds="true" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/cd" />
+
             <ImageView
                 android:id="@+id/lrImage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="200dp"
-                android:src="@drawable/lr"
-                android:adjustViewBounds="true" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/lr" />
 
             <ImageView
                 android:id="@+id/gradImage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="200dp"
-                android:src="@drawable/grad" 
-                android:adjustViewBounds="true" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/grad" />
 
             <ImageView
                 android:id="@+id/ye808sImage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="200dp"
-                android:src="@drawable/ye808s"
-                android:adjustViewBounds="true" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ye808s" />
 
             <ImageView
                 android:id="@+id/mbdtfImage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="200dp"
-                android:src="@drawable/mbdtf"
-                android:adjustViewBounds="true" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/mbdtf" />
 
             <ImageView
                 android:id="@+id/wttImage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="200dp"
-                android:src="@drawable/wtt"
-                android:adjustViewBounds="true" />
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/wtt" />
 
             <ImageView
                 android:id="@+id/yeezusImage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="200dp"
-                android:src="@drawable/yeezus"
-                android:adjustViewBounds="true"/>
-
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/yeezus" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -106,7 +112,6 @@
             android:layout_marginLeft="8dp"
             android:text="@string/versionLabel"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
     </RelativeLayout>
 
 </LinearLayout>
