@@ -113,7 +113,8 @@ public class MainActivity extends Activity {
 			//String updatedVersionString = getString(R.string.versionLabel) + getString(R.string.versionNumber);
 			//((TextView)findViewById(R.id.aboutVersion)).setText(updatedVersionString);
 			Dialog dialog = new Dialog(this); //Can't use getApplicationContext
-				dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+				//dialog.requestWindowFeature();
+				dialog.setTitle("About");
 				dialog.setContentView(R.layout.action_about);
 				dialog.setCancelable(true);
 				dialog.show();
