@@ -110,7 +110,7 @@ public class MainActivity extends Activity {
 
 		case R.id.action_about:
 		//TextView updatedAboutVersion = (TextView)findViewByID(R.id.aboutVersion);
-			//String updatedVersionString = getString(R.string.versionLabel) + getString(R.string.versionNumber);
+			String updatedVersionString = getString(R.string.versionLabel) + getString(R.string.versionNumber);
 			//((TextView)findViewById(R.id.aboutVersion)).setText(updatedVersionString);
 			Dialog dialog = new Dialog(this); //Can't use getApplicationContext
 				dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
