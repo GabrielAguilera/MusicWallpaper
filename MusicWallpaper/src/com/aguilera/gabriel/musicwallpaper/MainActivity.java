@@ -6,25 +6,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Dialog;
-import android.app.Fragment;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.os.Build;
 import android.app.WallpaperManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 
 
@@ -46,7 +39,9 @@ public class MainActivity extends Activity {
 			myWallpaperManager.clear();
 			Bitmap bmp;
 			bmp = BitmapFactory.decodeByteArray(input, 0, input.length);
-			myWallpaperManager.setBitmap(bmp);
+			((ImageView)findViewById(R.id.oldWallpaper)).setImageBitmap(bmp);
+			//((ImageView)findViewById(R.id.oldWallpaperImageView)).
+			//myWallpaperManager.setBitmap(bmp);
 
 			Toast.makeText(getApplicationContext(), "Your old wallpaper was successfully opened!", Toast.LENGTH_SHORT).show();;
 			fis.close();
