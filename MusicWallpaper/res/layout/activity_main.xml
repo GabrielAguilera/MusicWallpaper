@@ -120,21 +120,29 @@
     </HorizontalScrollView>
 
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/changeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/oldWallpaper"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="63dp"
+        android:text="Change" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/oldWallpaper"
+        android:layout_marginTop="43dp"
         android:text="Save" />
 
     <Button
-        android:id="@+id/changeButton"
+        android:id="@+id/restoreButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/saveButton"
+        android:layout_above="@+id/changeButton"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="35dp"
-        android:text="Change" />
+        android:layout_marginBottom="30dp"
+        android:text="Restore" />
 
 </RelativeLayout>

@@ -30,6 +30,15 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		Button restoreButton = (Button) findViewById(R.id.restoreButton);
+		restoreButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				restoreWallpaper();
+			}
+		});
+		
 		Button saveButton = (Button) findViewById(R.id.saveButton);
 		saveButton.setOnClickListener( new View.OnClickListener() {
 			
@@ -136,7 +145,6 @@ public class MainActivity extends Activity {
 			Bitmap bmp;
 			bmp = BitmapFactory.decodeByteArray(input, 0, input.length);
 			((ImageView)findViewById(R.id.oldWallpaper)).setImageBitmap(bmp);
-			Toast.makeText(getApplicationContext(), "Your old wallpaper was successfully opened!", Toast.LENGTH_SHORT).show();;
 			fis.close();
 			return;
 		}
@@ -146,6 +154,25 @@ public class MainActivity extends Activity {
 		}
 	}
 
+	public void restoreWallpaper(){
+		try{
+			WallpaperManager myWallpaperManager = WallpaperManager.getInstance(getApplicationContext());
+			String originalWallpaperFileName = "original_wallpaper.png";
+			FileInputStream fis;
+			fis = openFileInput(originalWallpaperFileName);
+			byte[] input = new byte[fis.available()];
+			while(fis.read(input) != -1){}
+			Bitmap bmp;
+			bmp = BitmapFactory.decodeByteArray(input, 0, input.length);
+			myWallpaperManager.setBitmap(bmp);
+			
+			Toast.makeText(getApplicationContext(), "Your old wallpaper was successfully restored!", Toast.LENGTH_SHORT).show();
+		}
+		catch(IOException e){
+			
+		}
+	}
+	
 	public void changeWallpaper(){
 		WallpaperManager myWallpaperManager = WallpaperManager.getInstance(getApplicationContext());
 		
